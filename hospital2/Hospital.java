@@ -30,8 +30,9 @@ class Doctor {
                 ", Specialization: " + specialization +
                 ", Fee: " + fee;
     }
-
 }
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 class Disease {
     private String name;
@@ -57,42 +58,427 @@ class Disease {
     }
 }
 
-class Patient
-{
+class LabTests {
+
+    static Scanner sc = new Scanner(System.in);
+
+    static final String RESET = "\033[0m";
+    static final String RED = "\033[1;31m";
+    static final String YELLOW = "\033[1;33m";
+
+    static void generalPhysicianTests() {
+        System.out.println("\n--- General Physician Lab Tests ---");
+        System.out.println();
+        System.out.println("1. Blood Test (CBC)          - Rs. 500");
+        System.out.println(
+                "Blood Test (CBC) - Measures red cells, white cells, and platelets to detect infection or anemia.");
+        System.out.println();
+        System.out.println("2. Blood Sugar Test          - Rs. 200");
+        System.out.println("Blood Sugar Test - Checks glucose levels to diagnose diabetes or hypoglycemia.");
+        System.out.println();
+        System.out.println("3. Urine Test                - Rs. 150");
+        System.out.println("Urine Test - Identifies infections, kidney problems, and metabolic disorders.");
+        System.out.println();
+        System.out.println("4. Dengue / Malaria Test     - Rs. 800");
+        System.out.println("Dengue / Malaria Test - Detects mosquito-borne infections in patients with fever.");
+        System.out.println();
+        System.out.println("5. Thyroid Test              - Rs. 600");
+        System.out.println("Thyroid Test - Evaluates thyroid hormone levels affecting metabolism and energy.");
+        System.out.println();
+
+        String testName = "None";
+        double testPrice = 0.0;
+        System.out.print(YELLOW + "Enter test: " + RESET);
+        int t = sc.nextInt();
+        sc.nextLine();
+
+        if (t == 1) {
+            testName = "Blood Test (CBC)";
+            testPrice = 500;
+            // System.out.println("Blood Test (CBC) - Measures red cells, white cells, and
+            // platelets to detect infection or anemia.");
+        } else if (t == 2) {
+            testName = "Blood Sugar Test";
+            testPrice = 200;
+            // System.out.println("Blood Sugar Test - Checks glucose levels to diagnose
+            // diabetes or hypoglycemia.");
+        } else if (t == 3) {
+            testName = "Urine Test";
+            testPrice = 150;
+            // System.out.println("Urine Test - Identifies infections, kidney problems, and
+            // metabolic disorders.");
+        } else if (t == 4) {
+            testName = "Dengue / Malaria Test";
+            testPrice = 800;
+            // System.out.println("Dengue / Malaria Test - Detects mosquito-borne infections
+            // in patients with fever.");
+        } else if (t == 5) {
+            testName = "Thyroid Test";
+            testPrice = 600;
+            // System.out.println("Thyroid Test - Evaluates thyroid hormone levels affecting
+            // metabolism and energy.");
+        } else
+            System.out.println(RED + "Invalid test. No test added." + RESET);
+    }
+
+    static void dermatologyTests() {
+        System.out.println("\n--- Dermatology Lab Tests ---");
+        System.out.println();
+        System.out.println("1. Skin Biopsy               - Rs. 1500");
+        System.out.println("Skin Biopsy - Examines skin tissue to diagnose infections, tumors, or skin disorders.");
+        System.out.println();
+        System.out.println("2. Allergy Test              - Rs. 1200");
+        System.out.println("Allergy Test - Identifies substances causing skin allergies or reactions.");
+        System.out.println();
+        System.out.println("3. Fungal Culture Test       - Rs. 700");
+        System.out.println("Fungal Culture Test - Detects fungal infections of skin, hair, or nails.");
+        System.out.println();
+        System.out.println("4. Patch Test                - Rs. 900");
+        System.out.println("Patch Test - Determines the cause of contact dermatitis or skin irritation.");
+        System.out.println();
+        System.out.println("5. Blood Test (Infection)    - Rs. 500");
+        System.out.println("Blood Test (Infection) - Checks for infection or inflammation related to skin issues.");
+        System.out.println();
+
+        String testName = "None";
+        double testPrice = 0.0;
+        System.out.print(YELLOW + "Enter test: " + RESET);
+        int t = sc.nextInt();
+        sc.nextLine();
+
+        if (t == 1) {
+            testName = "Skin Biopsy";
+            testPrice = 1500;
+            // System.out.println("Skin Biopsy – Examines skin tissue to diagnose
+            // infections, tumors, or skin disorders.");
+        } else if (t == 2) {
+            testName = "Allergy Test";
+            testPrice = 1200;
+            // System.out.println("Allergy Test – Identifies substances causing skin
+            // allergies or reactions.");
+        } else if (t == 3) {
+            testName = "Fungal Culture Test";
+            testPrice = 700;
+            // System.out.println("Fungal Culture Test – Detects fungal infections of skin,
+            // hair, or nails.");
+        } else if (t == 4) {
+            testName = "Patch Test";
+            testPrice = 900;
+            // System.out.println("Patch Test – Determines the cause of contact dermatitis
+            // or skin irritation.");
+        } else if (t == 5) {
+            testName = "Blood Test (Infection)";
+            testPrice = 500;
+            // System.out.println("Blood Test (Infection) – Checks for infection or
+            // inflammation related to skin issues.");
+        } else
+            System.out.println(RED + "Invalid test. No test added." + RESET);
+    }
+
+    static void dentistTests() {
+        System.out.println("\n--- Dentist Lab Tests ---");
+        System.out.println();
+        System.out.println("1. Dental X-Ray              - Rs. 300");
+        System.out.println("Dental X-Ray - Detects cavities, bone loss, and hidden dental problems.");
+        System.out.println();
+        System.out.println("2. OPG (Orthopantomogram)    - Rs. 1000");
+        System.out.println("OPG (Orthopantomogram) - Provides a full panoramic view of teeth and jaw.");
+        System.out.println();
+        System.out.println("3. Pulp Vitality Test        - Rs. 400");
+        System.out.println("Pulp Vitality Test - Checks whether a tooth nerve is alive or damaged.");
+        System.out.println();
+        System.out.println("4. Bite-wing X-Ray           - Rs. 350");
+        System.out.println("Bite-wing X-Ray - Identifies tooth decay between teeth and gum issues.");
+        System.out.println();
+        System.out.println("5. Blood Test (Pre-surgery)  - Rs. 600");
+        System.out.println("Blood Test (Pre-surgery) - Ensures patient safety before dental procedures.");
+        System.out.println();
+
+        String testName = "None";
+        double testPrice = 0.0;
+        System.out.print(YELLOW + "Enter test: " + RESET);
+        int t = sc.nextInt();
+        sc.nextLine();
+
+        if (t == 1) {
+            testName = "Dental X-Ray";
+            testPrice = 300;
+            // System.out.println("Dental X-Ray - Detects cavities, bone loss, and hidden
+            // dental problems.");
+        } else if (t == 2) {
+            testName = "OPG (Orthopantomogram)";
+            testPrice = 1000;
+            // System.out.println("OPG (Orthopantomogram) - Provides a full panoramic view
+            // of teeth and jaw.");
+        } else if (t == 3) {
+            testName = "Pulp Vitality Test";
+            testPrice = 400;
+            // System.out.println("Pulp Vitality Test - Checks whether a tooth nerve is
+            // alive or damaged.");
+        } else if (t == 4) {
+            testName = "Bite-wing X-Ray";
+            testPrice = 350;
+            // System.out.println("Bite-wing X-Ray - Identifies tooth decay between teeth
+            // and gum issues.");
+        } else if (t == 5) {
+            testName = "Blood Test (Pre-surgery)";
+            testPrice = 600;
+            // System.out.println("Blood Test (Pre-surgery) - Ensures patient safety before
+            // dental procedures.");
+        } else
+            System.out.println(RED + "Invalid test. No test added." + RESET);
+    }
+
+    static void cardiologistTests() {
+        System.out.println("\n--- Cardiologist Lab Tests ---");
+        System.out.println();
+        System.out.println("1. ECG                       - Rs. 500");
+        System.out.println("ECG (Electrocardiogram) - Records heart’s electrical activity to detect abnormalities.");
+        System.out.println();
+        System.out.println("2. Echocardiogram (ECHO)     - Rs. 2000");
+        System.out.println("Echocardiogram (ECHO) - Uses ultrasound to visualize heart structure and function.");
+        System.out.println();
+        System.out.println("3. Treadmill Test (TMT)      - Rs. 2500");
+        System.out.println("Treadmill Test (TMT) - Assesses heart performance during physical stress.");
+        System.out.println();
+        System.out.println("4. Blood Pressure Test       - Rs. 150");
+        System.out.println("Blood Pressure Test - Measures force of blood against artery walls.");
+        System.out.println();
+        System.out.println("5. Lipid Profile             - Rs. 800");
+        System.out.println("Lipid Profile - Checks cholesterol levels linked to heart disease risk.");
+        System.out.println();
+
+        String testName = "None";
+        double testPrice = 0.0;
+        System.out.print(YELLOW + "Enter test: " + RESET);
+        int t = sc.nextInt();
+        sc.nextLine();
+
+        if (t == 1) {
+            testName = "ECG";
+            testPrice = 500;
+            // System.out.println("ECG (Electrocardiogram) - Records heart’s electrical
+            // activity to detect abnormalities.");
+        } else if (t == 2) {
+            testName = "Echocardiogram (ECHO)";
+            testPrice = 2000;
+            // System.out.println("Echocardiogram (ECHO) - Uses ultrasound to visualize
+            // heart structure and function.");
+        } else if (t == 3) {
+            testName = "Treadmill Test (TMT)";
+            testPrice = 2500;
+            // System.out.println("Treadmill Test (TMT) - Assesses heart performance during
+            // physical stress.");
+        } else if (t == 4) {
+            testName = "Blood Pressure Test";
+            testPrice = 150;
+            // System.out.println("Blood Pressure Test - Measures force of blood against
+            // artery walls.");
+        } else if (t == 5) {
+            testName = "Lipid Profile";
+            testPrice = 800;
+            // System.out.println("Lipid Profile - Checks cholesterol levels linked to heart
+            // disease risk.");
+        } else
+            System.out.println(RED + "Invalid test. No test added." + RESET);
+    }
+
+    static void neurologistTests() {
+        System.out.println("\n--- Neurologist Lab Tests ---");
+        System.out.println();
+        System.out.println("1. EEG                       - Rs. 1800");
+        System.out.println("EEG (Electroencephalogram) - Records brain electrical activity to detect seizures.");
+        System.out.println();
+        System.out.println("2. MRI Brain                 - Rs. 5000");
+        System.out.println("MRI Brain - Produces detailed images of the brain to detect disorders.");
+        System.out.println();
+        System.out.println("3. CT Scan                   - Rs. 3500");
+        System.out.println("CT Scan - Uses X-rays to detect brain injury, bleeding, or tumors.");
+        System.out.println();
+        System.out.println("4. Nerve Conduction Test     - Rs. 2500");
+        System.out.println("Nerve Conduction Test (NCV) - Measures nerve signal speed to diagnose nerve damage.");
+        System.out.println();
+        System.out.println("5. Lumbar Puncture           - Rs. 2000");
+        System.out.println("Lumbar Puncture - Collects spinal fluid to detect infections or neurological diseases.");
+        System.out.println();
+
+        String testName = "None";
+        double testPrice = 0.0;
+        System.out.print(YELLOW + "Enter test: " + RESET);
+        int t = sc.nextInt();
+        sc.nextLine();
+
+        if (t == 1) {
+            testName = "EEG";
+            testPrice = 1800;
+            // System.out.println("EEG (Electroencephalogram) - Records brain electrical
+            // activity to detect seizures.");
+        } else if (t == 2) {
+            testName = "MRI Brain";
+            testPrice = 5000;
+            // System.out.println("MRI Brain - Produces detailed images of the brain to
+            // detect disorders.");
+        } else if (t == 3) {
+            testName = "CT Scan";
+            testPrice = 3500;
+            // System.out.println("CT Scan - Uses X-rays to detect brain injury, bleeding,
+            // or tumors.");
+        } else if (t == 4) {
+            testName = "Nerve Conduction Test";
+            testPrice = 2500;
+            // System.out.println("Nerve Conduction Test (NCV) - Measures nerve signal speed
+            // to diagnose nerve damage.");
+        } else if (t == 5) {
+            testName = "Lumbar Puncture";
+            testPrice = 2000;
+            // System.out.println("Lumbar Puncture - Collects spinal fluid to detect
+            // infections or neurological diseases.");
+        } else
+            System.out.println(RED + "Invalid test. No test added." + RESET);
+    }
+
+    static void orthopedicTests() {
+        System.out.println("\n--- Orthopedics Lab Tests ---");
+        System.out.println();
+        System.out.println("1. X-Ray                     - Rs. 400");
+        System.out.println("X-Ray – Identifies fractures, dislocations, and bone abnormalities.");
+        System.out.println();
+        System.out.println("2. MRI (Joint / Spine)       - Rs. 4500");
+        System.out.println("MRI (Joint / Spine) – Detects soft tissue injuries like ligament or disc damage.");
+        System.out.println();
+        System.out.println("3. CT Scan                   - Rs. 3500");
+        System.out.println("CT Scan – Provides detailed bone images for complex fractures.");
+        System.out.println();
+        System.out.println("4. Bone Density Test (DEXA)  - Rs. 2000");
+        System.out.println("Bone Density Test (DEXA) – Measures bone strength to diagnose osteoporosis.");
+        System.out.println();
+        System.out.println("5. Calcium / Vitamin D Test  - Rs. 700");
+        System.out.println("Calcium / Vitamin D Test – Evaluates bone health and deficiency disorders.");
+        System.out.println();
+
+        String testName = "None";
+        double testPrice = 0.0;
+        System.out.print(YELLOW + "Enter test: " + RESET);
+        int t = sc.nextInt();
+        sc.nextLine();
+
+        if (t == 1) {
+            testName = "X-Ray";
+            testPrice = 400;
+            // System.out.println("X-Ray - Identifies fractures, dislocations, and bone
+            // abnormalities.");
+        } else if (t == 2) {
+            testName = "MRI (Joint / Spine)";
+            testPrice = 4500;
+            // System.out.println("MRI (Joint / Spine) - Detects soft tissue injuries like
+            // ligament or disc damage.");
+        } else if (t == 3) {
+            testName = "CT Scan";
+            testPrice = 3500;
+            // System.out.println("CT Scan - Provides detailed bone images for complex
+            // fractures.");
+        } else if (t == 4) {
+            testName = "Bone Density Test (DEXA)";
+            testPrice = 2000;
+            // System.out.println("Bone Density Test (DEXA) - Measures bone strength to
+            // diagnose osteoporosis.");
+        } else if (t == 5) {
+            testName = "Calcium / Vitamin D Test";
+            testPrice = 700;
+            // System.out.println("Calcium / Vitamin D Test - Evaluates bone health and
+            // deficiency disorders.");
+        } else
+            System.out.println(RED + "Invalid test. No test added." + RESET);
+    }
+
+    static void gastroenterologyTests() {
+        System.out.println("\n--- Gastroenterology Lab Tests ---");
+        System.out.println();
+        System.out.println("1. Endoscopy                 - Rs. 2500");
+        System.out.println("Endoscopy – Examines the stomach and esophagus using a flexible camera.");
+        System.out.println();
+        System.out.println("2. Colonoscopy               - Rs. 3000");
+        System.out.println("Colonoscopy – Inspects the colon to detect ulcers, polyps, or cancer.");
+        System.out.println();
+        System.out.println("3. Liver Function Test (LFT) - Rs. 900");
+        System.out.println("Liver Function Test (LFT) – Assesses liver health and enzyme levels.");
+        System.out.println();
+        System.out.println("4. Ultrasound Abdomen        - Rs. 1200");
+        System.out.println("Ultrasound Abdomen – Visualizes abdominal organs like liver and gallbladder.");
+        System.out.println();
+        System.out.println("5. Stool Test                - Rs. 300");
+        System.out.println("Stool Test – Detects infections, parasites, or digestive disorders.");
+        System.out.println();
+
+        String testName = "None";
+        double testPrice = 0.0;
+        System.out.print(YELLOW + "Enter test: " + RESET);
+        int t = sc.nextInt();
+        sc.nextLine();
+
+        if (t == 1) {
+            testName = "Endoscopy";
+            testPrice = 2500;
+            // System.out.println("Endoscopy - Examines the stomach and esophagus using a
+            // flexible camera.");
+        } else if (t == 2) {
+            testName = "Colonoscopy";
+            testPrice = 3000;
+            // System.out.println("Colonoscopy - Inspects the colon to detect ulcers,
+            // polyps, or cancer.");
+        } else if (t == 3) {
+            testName = "Liver Function Test (LFT)";
+            testPrice = 900;
+            // System.out.println("Liver Function Test (LFT) - Assesses liver health and
+            // enzyme levels.");
+        } else if (t == 4) {
+            testName = "Ultrasound Abdomen";
+            testPrice = 1200;
+            // System.out.println("Ultrasound Abdomen - Visualizes abdominal organs like
+            // liver and gallbladder.");
+        } else if (t == 5) {
+            testName = "Stool Test";
+            testPrice = 300;
+            // System.out.println("Stool Test - Detects infections, parasites, or digestive
+            // disorders.");
+        } else
+            System.out.println(RED + "Invalid test. No test added." + RESET);
+    }
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+class Patient {
     private long id;
     private String name;
     private int age;
     private String gender;
 
-    Patient(long id, String name, int age, String gender)
-    {
-        this.id=id;
-        this.name=name;
-        this.age=age;
-        this.gender=gender;
+    Patient(long id, String name, int age, String gender) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
     }
 
-    public long getId()
-    {
+    public long getId() {
         return id;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public int getAge()
-    {
+    public int getAge() {
         return age;
     }
 
-    public String getGender()
-    {
+    public String getGender() {
         return gender;
     }
 }
 
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 class Hospital {
     static Scanner sc = new Scanner(System.in);
@@ -100,6 +486,8 @@ class Hospital {
     static String historyPatientId = "";
     static String historyPatientName = "";
     static String historyRecord = "";
+
+    /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
     // ========== COLORS ==========
     static final String RESET = "\033[0m";
@@ -111,6 +499,8 @@ class Hospital {
     static final String CYAN = "\033[1;36m";
     static final String WHITE = "\033[1;37m";
     static final String PURPLE = "\u001B[35m";
+
+    /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
     private static Disease displayGeneralPhysicianTreatments() {
         Disease disease = null;
@@ -137,6 +527,8 @@ class Hospital {
         return disease;
     }
 
+    /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
     private static Disease displayDermatologyTreatments() {
         Disease disease = null;
         while (disease == null) {
@@ -162,10 +554,13 @@ class Hospital {
         return disease;
     }
 
+    /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
     private static Disease displayDentistTreatments() {
         Disease disease = null;
         while (disease == null) {
-            System.out.println(CYAN + "\n1. Tooth Pain\n2. Bleeding Gums\n3. Cavities (Tooth Decay)\n4. Mouth Ulcers" + RESET);
+            System.out.println(
+                    CYAN + "\n1. Tooth Pain\n2. Bleeding Gums\n3. Cavities (Tooth Decay)\n4. Mouth Ulcers" + RESET);
             System.out.print(YELLOW + "Select a symptom: " + RESET);
             switch (sc.nextInt()) {
                 case 1:
@@ -187,10 +582,13 @@ class Hospital {
         return disease;
     }
 
+    /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
     private static Disease displayCardiologistTreatments() {
         Disease disease = null;
         while (disease == null) {
-            System.out.println(CYAN + "\n1. Chest Pain\n2. Shortness of Breath\n3. Fainting\n4. Sudden Breathlessness" + RESET);
+            System.out.println(
+                    CYAN + "\n1. Chest Pain\n2. Shortness of Breath\n3. Fainting\n4. Sudden Breathlessness" + RESET);
             System.out.print(YELLOW + "Select a symptom: " + RESET);
             switch (sc.nextInt()) {
                 case 1:
@@ -212,10 +610,13 @@ class Hospital {
         return disease;
     }
 
+    /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
     private static Disease displayNeurologistTreatments() {
         Disease disease = null;
         while (disease == null) {
-            System.out.println(CYAN + "\n1. Severe Headache\n2. Migraine\n3. Loss of Consciousness\n4. Muscle Weakness" + RESET);
+            System.out.println(
+                    CYAN + "\n1. Severe Headache\n2. Migraine\n3. Loss of Consciousness\n4. Muscle Weakness" + RESET);
             System.out.print(YELLOW + "Select a symptom: " + RESET);
             switch (sc.nextInt()) {
                 case 1:
@@ -236,6 +637,8 @@ class Hospital {
         }
         return disease;
     }
+
+    /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
     private static Disease displayOrthopedicTreatments() {
         Disease disease = null;
@@ -262,6 +665,7 @@ class Hospital {
         return disease;
     }
 
+    /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
     private static Disease displayGastroenterologyTreatments() {
         Disease disease = null;
@@ -288,11 +692,14 @@ class Hospital {
         return disease;
     }
 
+    /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
     static String generateOTP() {
         Random r = new Random();
         return "" + (100000 + r.nextInt(900000));
     }
+
+    /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
     static void showHistory() {
         if (historyPatientId.isEmpty()) {
@@ -306,6 +713,8 @@ class Hospital {
         System.out.println("Record      : " + historyRecord + RESET);
         System.out.println(CYAN + "==============================================" + RESET);
     }
+
+    /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
     public static void main(String[] args) {
 
@@ -321,19 +730,23 @@ class Hospital {
                 "| \\____) | _/ /   \\ \\_ _| |_\\   |_ _| |_   _| |_   _| |_ _/ /__/ |_| |__/ |_| |_.' /  _| |  | |_\\  `-'  / \\____) | _| |_   _| |_   _| |_ _/ /   \\ \\_ _| |__/ | \n"
                 + WHITE +
                 " \\______.'|____| |____|_____|\\____|_____| |_____| |_____|________|________|______.'  |____||____|`.___.' \\______.'|_____| |_____| |_____|____| |____|________| \n"
-                + RESET
-        );
+                + RESET);
 
         /*
-              ______        _      ____  _____ _____ _________ _____ ________ ________ ______     ____  ____   ___    ______   _______ _____ _________    _      _____
-            .' ____ \      / \    |_   \|_   _|_   _|  _   _  |_   _|  __   _|_   __  |_   _ `.  |_   ||   _|.'   `..' ____ \ |_   __ \_   _|  _   _  |  / \    |_   _|
-            | (___ \_|    / _ \     |   \ | |   | | |_/ | | \_| | | |_/  / /   | |_ \_| | | `. \   | |__| | /  .-.  \ (___ \_|  | |__) || | |_/ | | \_| / _ \     | |
-             _.____`.    / ___ \    | |\ \| |   | |     | |     | |    .'.' _  |  _| _  | |  | |   |  __  | | |   | |_.____`.   |  ___/ | |     | |    / ___ \    | |   _
-            | \____) | _/ /   \ \_ _| |_\   |_ _| |_   _| |_   _| |_ _/ /__/ |_| |__/ |_| |_.' /  _| |  | |_\  `-'  / \____) | _| |_   _| |_   _| |_ _/ /   \ \_ _| |__/ |
-             \______.'|____| |____|_____|\____|_____| |_____| |_____|________|________|______.'  |____||____|`.___.' \______.'|_____| |_____| |_____|____| |____|________|
+         * ______ _ ____ _____ _____ _________ _____ ________ ________ ______ ____ ____
+         * ___ ______ _______ _____ _________ _ _____
+         * .' ____ \ / \ |_ \|_ _|_ _| _ _ |_ _| __ _|_ __ |_ _ `. |_ || _|.' `..' ____
+         * \ |_ __ \_ _| _ _ | / \ |_ _|
+         * | (___ \_| / _ \ | \ | | | | |_/ | | \_| | | |_/ / / | |_ \_| | | `. \ | |__|
+         * | / .-. \ (___ \_| | |__) || | |_/ | | \_| / _ \ | |
+         * _.____`. / ___ \ | |\ \| | | | | | | | .'.' _ | _| _ | | | | | __ | | | |
+         * |_.____`. | ___/ | | | | / ___ \ | | _
+         * | \____) | _/ / \ \_ _| |_\ |_ _| |_ _| |_ _| |_ _/ /__/ |_| |__/ |_| |_.' /
+         * _| | | |_\ `-' / \____) | _| |_ _| |_ _| |_ _/ / \ \_ _| |__/ |
+         * \______.'|____| |____|_____|\____|_____| |_____|
+         * |_____|________|________|______.' |____||____|`.___.' \______.'|_____|
+         * |_____| |_____|____| |____|________|
          */
-
-
 
         System.out.println(GREEN + "-------- WELCOME TO SANITIZED SQUAD HOSPITAL ------------" + RESET);
         System.out.println(CYAN + "--------- ENTER PATIENT DETAILS -------" + RESET);
@@ -347,9 +760,9 @@ class Hospital {
         String gender = "";
         int retry = 0;
 
-        while(gender.equals("") || 
-        !(gender.equalsIgnoreCase("m") || gender.equalsIgnoreCase("f"))) {
-            if(retry > 0) {
+        while (gender.equals("") ||
+                !(gender.equalsIgnoreCase("m") || gender.equalsIgnoreCase("f"))) {
+            if (retry > 0) {
                 System.out.println("Enter a valid gender");
             }
             System.out.print(YELLOW + "Gender (M/F): " + RESET);
@@ -363,7 +776,9 @@ class Hospital {
         int specialization = 10;
         Doctor doctor = null;
         while (specialization > 7 || specialization < 1) {
-            System.out.println(CYAN + "1. General Physician \n2. Dermatology \n3. Dentist \n4. Cardiologist \n5. Neurologist \n6. Orthopedics \n7. Gastroenterology" + RESET);
+            System.out.println(CYAN
+                    + "1. General Physician \n2. Dermatology \n3. Dentist \n4. Cardiologist \n5. Neurologist \n6. Orthopedics \n7. Gastroenterology"
+                    + RESET);
             System.out.print(YELLOW + "Enter choice: " + RESET);
             specialization = sc.nextInt();
 
@@ -394,6 +809,8 @@ class Hospital {
             }
         }
 
+        /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
         System.out.println(GREEN + "------ AVAILABLE DOCTORS ------" + RESET);
         System.out.println(CYAN + doctor + RESET);
 
@@ -423,6 +840,8 @@ class Hospital {
                 break;
         }
 
+        /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
         System.out.println(CYAN + "\n----- Medication Details -----" + RESET);
         System.out.println(GREEN + "Symptom Name      : " + YELLOW + disease.getName() + RESET);
         System.out.println(GREEN + "Recommended Medicine: " + YELLOW + disease.getMedicine() + RESET);
@@ -440,24 +859,33 @@ class Hospital {
         double testPrice = 0.0;
 
         if (wantTest == 1) {
-            System.out.println(CYAN + "\n1. Blood Test - Rs. 500");
-            System.out.println("2. ECG - Rs. 800");
-            System.out.println("3. X-Ray - Rs. 400" + RESET);
-            System.out.print(YELLOW + "Enter test: " + RESET);
-            int t = sc.nextInt();
-            sc.nextLine();
 
-            if (t == 1) {
-                testName = "Blood Test";
-                testPrice = 500;
-            } else if (t == 2) {
-                testName = "ECG";
-                testPrice = 800;
-            } else if (t == 3) {
-                testName = "X-Ray";
-                testPrice = 400;
-            } else System.out.println(RED + "Invalid test. No test added." + RESET);
+            switch (specialization) {
+                case 1:
+                    LabTests.generalPhysicianTests();
+                    break;
+                case 2:
+                    LabTests.dermatologyTests();
+                    break;
+                case 3:
+                    LabTests.dentistTests();
+                    break;
+                case 4:
+                    LabTests.cardiologistTests();
+                    break;
+                case 5:
+                    LabTests.neurologistTests();
+                    break;
+                case 6:
+                    LabTests.orthopedicTests();
+                    break;
+                case 7:
+                    LabTests.gastroenterologyTests();
+                    break;
+            }
         }
+
+        /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
         // Appointment time
         System.out.println(MAGENTA + "\n------------------ APPOINTMENT TIME ------------------" + RESET);
@@ -469,16 +897,18 @@ class Hospital {
         int slot = sc.nextInt();
         sc.nextLine();
 
-        String apptTime = (slot == 1) ? "10:00 AM" :
-                (slot == 2) ? "12:00 PM" :
-                        (slot == 3) ? "03:00 PM" :
-                                (slot == 4) ? "06:00 PM" : "Walk-in";
+        String apptTime = (slot == 1) ? "10:00 AM"
+                : (slot == 2) ? "12:00 PM" : (slot == 3) ? "03:00 PM" : (slot == 4) ? "06:00 PM" : "Walk-in";
+
+        /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
         // Billing
         double doctorFee = 300.0;
         double subtotal = doctorFee + disease.getMedicinePrice() + testPrice;
         double taxAmount = Math.round(subtotal * 0.18 * 100.0) / 100.0;
         double totalAmount = subtotal + taxAmount;
+
+        /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
         // COST ESTIMATE
         System.out.println(CYAN + "\n================= ESTIMATED COST =================" + RESET);
@@ -490,6 +920,8 @@ class Hospital {
         System.out.println("TOTAL PAYABLE     : Rs. " + totalAmount + RESET);
         System.out.println(CYAN + "==================================================" + RESET);
 
+        /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
         // Proceed?
         System.out.print(YELLOW + "\nProceed to pay? (yes/no): " + RESET);
         String proceed = sc.nextLine();
@@ -497,6 +929,8 @@ class Hospital {
             System.out.println(RED + "Payment cancelled." + RESET);
             return;
         }
+
+        /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
         // OTP
         String otp = generateOTP();
@@ -509,6 +943,8 @@ class Hospital {
             return;
         }
 
+        /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
         // Store history
         String billId = "BILL" + System.currentTimeMillis();
         String patientId = "P" + patientobj.getId();
@@ -520,6 +956,8 @@ class Hospital {
                 " | Disease: " + disease +
                 " | Test: " + testName +
                 " | TotalPaid: Rs." + totalAmount;
+
+        /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
         // Final bill
         System.out.println(GREEN + "\n=============== PAYMENT SUCCESSFUL ===============" + RESET);
@@ -534,11 +972,14 @@ class Hospital {
         System.out.println("Total Paid       : Rs. " + totalAmount + RESET);
         System.out.println(GREEN + "==================================================" + RESET);
 
+        /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
         // Ask history
         System.out.print(YELLOW + "\nView saved patient history? (yes/no): " + RESET);
         String view = sc.nextLine();
-        if (view.equalsIgnoreCase("yes")) showHistory();
+        if (view.equalsIgnoreCase("yes"))
+            showHistory();
 
-        System.out.println(CYAN + "\nThank you — Get Well Soon!" + RESET);
+        System.out.println(CYAN + "\nThank you - Get Well Soon!" + RESET);
     }
 }
